@@ -1,0 +1,38 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%; //1rem=10pix on default
+scroll-behavior: smooth;
+  @include respond(big-tablet) { //1200
+    font-size: 56.25%;
+  }
+  //bigger first so 500 less than both quries applies the least
+  @include respond(tablet) { //900 600
+    font-size: 50%; //font size is 50% of 16px 8px so 1 rem is 8px
+  }
+}
+body {
+  box-sizing: border-box;
+  padding: 1rem 0;
+  font-family: "Poppins", sans-serif;
+  @include respond(tablet) { //900
+    padding: 0;
+  }
+  @include respond(phone) { //600
+    padding: 0; 
+  }
+  background-color: rgb(25, 25, 25);
+}
+section {
+  transition: all 0.5s;
+  padding-top: 2rem;
+  overflow-anchor: none;
+  @include respond(tablet) { //600
+    padding: 0;
+  }
+}

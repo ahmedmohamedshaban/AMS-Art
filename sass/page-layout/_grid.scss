@@ -1,0 +1,170 @@
+.work {
+  background: linear-gradient(
+    to right bottom,
+    #2f2f2f,
+    #171616,
+    #202020,
+    black
+  );
+  padding: 10rem 0 0 0;
+}
+//first grid
+.container__photos {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  gap: 3.5rem;
+  margin: 3rem 3rem;
+  row-gap: 4rem;
+  //second grid
+  &-2 {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.5rem;
+    margin: 3rem 3rem;
+    row-gap: 4rem;
+    grid-template-rows: repeat(4, 1fr);
+  }
+  &-3 {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    margin: 3rem 3rem;
+    row-gap: 4rem;
+    grid-template-rows: repeat(6, 1fr);
+  }
+}
+
+.photo {
+  transition: 0.6s all;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  &::after {
+    content: "photo name";
+    transition: 0.4s all;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #181818b4;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  }
+  &:hover::after {
+    clip-path: polygon(0 90%, 100% 90%, 100% 100%, 0 100%);
+  }
+  &:hover {
+    transform: scale(1.02) translateY(-1px);
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  &-1 {
+    background-image: url(../images/Distobya-min.png);
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+  &-2 {
+    background-image: url(../images/cinematic\ car\ scene.jpg);
+    grid-column: 2/4;
+    height: 60vh;
+  }
+  &-3 {
+    background-image: url(../images/Ancient\ Temple_01-min.png);
+    grid-column: 3/4;
+    grid-row: 2/4;
+  }
+  &-4 {
+    background-image: url(../images/1st\ cinematic\ scene.jpg);
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+  &-5 {
+    background-image: url(../images/bojes\ chaple-min.png);
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+  &-6 {
+    background-image: url(../images/planet-min.png);
+    grid-column: 1/4;
+  }
+  &-7 {
+    background-image: url(../images/steampunk-min.png);
+    grid-column: 1/2;
+    grid-row: 5/7;
+  }
+  &-8 {
+    background-image: url(../images/day\ 10.png);
+    grid-column: 2/4;
+  }
+  &-9 {
+    background-image: url(../images/surreal\ interior.png);
+    grid-column: 1/3;
+  }
+  &-10 {
+    background-image: url(../images/fantasy\ lap-min.png);
+    grid-column: 2/4;
+    grid-row: 5/6;
+  }
+  &-11 {
+    background-image: url(../images/Angel\ Desert.png);
+    grid-column: 1/4;
+  }
+  &-12 {
+    background-image: url(../images/realistic\ environment-min.png);
+    grid-row: 7/8;
+    grid-column: 3/4;
+  }
+
+  //second grid
+  &-13 {
+    background-image: url(../images/3D_Environnment-min.png);
+    grid-row: 1/2;
+    grid-column: 1/4;
+    height: 70vh;
+  }
+  &-14 {
+    background-image: url(../images/abanded\ temble-min.png);
+    grid-row: 2/3;
+    grid-column: 1/4;
+  }
+  &-15 {
+    background-image: url(../images/abanded\ temble_02-min.png);
+    grid-row: 3/4;
+    grid-column: 1/4;
+  }
+  &-16 {
+    background-image: url(../images/abanded\ temble_03-min.png);
+    grid-row: 4/5;
+    grid-column: 1/4;
+  }
+  &-17 {
+    background-image: url(../images/01.png);
+    height: 65vh;
+  }
+  &-18 {
+    background-image: url(../images/02.png);
+  }
+  &-19 {
+    background-image: url(../images/03.png);
+  }
+  &-20 {
+    background-image: url(../images/04.png);
+  }
+  &-21 {
+    background-image: url(../images/05.png);
+  }
+  &-22 {
+    background-image: url(../images/06.png);
+  }
+}

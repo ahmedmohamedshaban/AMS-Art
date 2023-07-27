@@ -1,0 +1,64 @@
+.programs {
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  @include respond(tablet) {
+    //600
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  @include respond(phone) {
+    //600
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__images {
+    @include respond(tablet) {
+   padding: 0;
+    }
+    padding: 12rem;
+    background-color: rgba(19, 19, 19, 0.478);
+    backdrop-filter: blur(4rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    gap: 3rem;
+    &-i {
+      width: 13rem;
+      transition: all 0.4s;
+      animation: float ease-in-out 4s infinite;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  &__heading {
+    font-size: 3.9rem;
+    margin-bottom: 5rem;
+    font-weight: 500;
+    background-image: linear-gradient(to top, #ffd101, rgb(82, 82, 226));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-transform: capitalize;
+    &-2 {
+      background-image: linear-gradient(-45deg, #08004e, rgb(82, 82, 226));
+    }
+    &-3 {
+      background-image: linear-gradient(to top, #08004e, rgb(226, 130, 82));
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.hidden {
+  opacity: 0;
+}
+.hidden-1 {
+  display: none;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.hidden-section {
+  transform: translateY(6rem);
+  opacity: 0;
+}
+.sticky-down {
+  transform: translateY(-2.6rem);
+}
+.sticky-up {
+  transform: translateY(0);
+}
+
+.hidden-image {
+  transform: translateX(3rem);
+  opacity: 0;
+  filter: blur(1rem);
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4rem);
+  z-index: 100;
+  transition: all 0.5s;
+  display: flex;
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background-image: none;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+    @include respond(tablet) {
+      background-size: 80%;
+    }
+  }
+}
+.close {
+  position: absolute;
+  font-size: 6rem;
+  top: 10rem;
+  right: 5rem;
+  color: white;
+  cursor: pointer;
+  padding: 1rem;
+}
+.header_top {
+  transform: translateY(-10rem);
+}
+.zoom {
+  transform: scale(1.5);
+}
+.margin-big {
+  margin-left: 8rem;
+}
+.margin-big-top {
+  margin-top: 6rem;
+}
+.break {
+  flex-basis: 100%;
+  height: 0;
+}

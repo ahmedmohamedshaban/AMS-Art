@@ -1,0 +1,12 @@
+.icons{
+    font-size: 5rem;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    transition: .3s all;
+    &:hover{
+        color: rgb(219, 214, 214);
+        transform: scale(1.02);
+    }
+}

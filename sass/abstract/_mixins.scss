@@ -1,0 +1,32 @@
+@mixin centre {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*
+phone 0 600
+tablet 600 900
+900 1200
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint==phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint==tablet {
+    @media (max-width: 56.25em) {
+      //900px
+      @content;
+    }
+  }
+  @if $breakpoint==big-tablet {
+    @media (max-width: 75em) {
+      //1200
+      @content;
+    }
+  }
+}
